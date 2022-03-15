@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+
+group 'io.github.devrawr.menus'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+    }
+
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    api 'org.jetbrains.kotlin:kotlin-stdlib'
+    api 'com.github.devrawr:tasks:0385a06671'
+    api 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+
+    testApi 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testApi 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
