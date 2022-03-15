@@ -1,5 +1,6 @@
 package io.github.devrawr.menus.listener
 
+import io.github.devrawr.menus.Menu
 import io.github.devrawr.menus.Menus
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -31,5 +32,6 @@ object InventoryListener : Listener
         val menu = Menus.menus[player]
 
         menu?.inventories?.remove(player)
+        Menus.menus.remove(player)
     }
 }

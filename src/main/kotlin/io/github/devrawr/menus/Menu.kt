@@ -33,6 +33,12 @@ abstract class Menu(
         }
     }
 
+    /**
+     * Get the entries to display within the inventory.
+     *
+     * @param player the player to retrieve the entries for
+     * @return the entries, as a [Map], with [Int] representing the index, and [Button] representing the item.
+     */
     abstract fun getEntries(player: Player): HashMap<Int, Button>
 
     /**
